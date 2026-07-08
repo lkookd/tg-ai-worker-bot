@@ -3,7 +3,7 @@ export default {
     const url = new URL(request.url);
 
     // 设置 Telegram Webhook
-    if (url.pathname === "/setWebhook") {
+    if (url.pathname.toLowerCase() === "/setwebhook") {
       const webhookUrl = `${url.origin}/webhook`;
 
       const res = await fetch(
